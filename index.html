@@ -3,26 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yukun Li</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+    <title>Self-Introduction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#64748B',
+                        accent: '#10B981',
+                        light: '#F8FAFC',
+                        dark: '#1E293B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
         }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            }
+            .card-shadow {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
         }
     </style>
 </head>
-<body>
-    <h1>Yukun Li</h1>
-    <p>Hi! I'm Li Yukun from USTB, a 21-year-old college student majored in Internet of Things Engineering.</p>
+<body class="bg-gray-50 font-sans text-dark">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Main Card -->
+        <div class="bg-white rounded-xl overflow-hidden card-shadow transition-all duration-300 hover:shadow-lg">
+            <div class="md:flex">
+                <!-- Profile Photo -->
+                <div class="md:w-1/3 p-6 flex justify-center md:justify-start">
+                    <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20">
+                        <img src="26b07707c4699ddd571f204e34b75e0.jpg" alt="Profile photo of [Your Name]" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                </div>
+                
+                <!-- Content Area -->
+                <div class="md:w-2/3 p-6 md:p-8">
+                    <!-- Name as Main Heading -->
+                    <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-primary mb-4 text-shadow">Yukun Li</h1>
+                    
+                    <!-- Professional Title -->
+                    <div class="text-xl text-secondary mb-6 flex items-center">
+                        <i class="fa fa-briefcase mr-2"></i>
+                        <span>USTB senior student</span>
+                    </div>
+                    
+                    <!-- Introduction Text -->
+                    <div class="prose max-w-none text-gray-700 leading-relaxed">
+                        <p class="mb-4">
+                            Hi! I'm Li Yukun from USTB, a 21-year-old college student majored in Internet of Things Engineering.
+                        </p>
+                        <p class="mb-4">
+                            I'm gonna hold a Bachelor's degree in Internet of Things Engineering from University of Science and Technology Beijing next year and I'm going to study for a 
+                            doctorate in Beijing University of Posts and Telecommunications in the next 5 years.
+                        </p>
+                        <p>
+                            When I'm not coding, you can find me playing on the courts, experimenting with new recipes, 
+                            or contributing to open-source projects. I'm always eager to take on new challenges and collaborate 
+                            with talented individuals.
+                        </p>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="mt-8 flex flex-wrap gap-4 text-sm">
+                        <a href="2147966747@qq.com" class="flex items-center text-primary hover:text-primary/80 transition-colors">
+                            <i class="fa fa-envelope mr-2"></i>
+                            2147966747@qq.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/%E6%98%B1%E9%94%9F-%E6%9D%8E-291284387/" target="_blank" class="flex items-center text-primary hover:text-primary/80 transition-colors">
+                            <i class="fa fa-linkedin mr-2"></i>
+                            linkedin.com/in/Yukun 
+                        </a>
+                        <a href="https://github.com/joy607" target="_blank" class="flex items-center text-primary hover:text-primary/80 transition-colors">
+                            <i class="fa fa-github mr-2"></i>
+                            github.com/joy607
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Information Section -->
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+            <!-- Skills -->
+            <div class="bg-white p-6 rounded-lg card-shadow">
+                <h3 class="text-lg font-semibold mb-4 text-primary flex items-center">
+                    <i class="fa fa-cogs mr-2"></i> Skills
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-center"><i class="fa fa-check text-accent mr-2"></i> Python (torch\Flask...)</li>
+                    <li class="flex items-center"><i class="fa fa-check text-accent mr-2"></i> C++</li>
+                    <li class="flex items-center"><i class="fa fa-check text-accent mr-2"></i> Java (Springboot)</li>
+                    <li class="flex items-center"><i class="fa fa-check text-accent mr-2"></i> Machine Learning</li>
+                </ul>
+            </div>
+            
+            <!-- Education -->
+            <div class="bg-white p-6 rounded-lg card-shadow">
+                <h3 class="text-lg font-semibold mb-4 text-primary flex items-center">
+                    <i class="fa fa-graduation-cap mr-2"></i> Education
+                </h3>
+                <div class="text-gray-700">
+                    <p class="font-medium">USTB</p>
+                    <p class="text-sm">Bachelor in Internet of Things Engineering</p>
+                    <p class="text-sm text-gray-500">2022-2026</p>
+                </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="bg-white p-6 rounded-lg card-shadow">
+                <h3 class="text-lg font-semibold mb-4 text-primary flex items-center">
+                    <i class="fa fa-language mr-2"></i> Languages
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>Chinese (Native)</li>
+                    <li>English (Fluent)</li>
+                    <li>French (Conversational)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="mt-12 py-6 bg-primary/10 text-center text-gray-600 text-sm">
+        <p>Updated: September 2025</p>
+    </footer>
+    
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add fade-in animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.card-shadow');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
 </body>
 </html>
